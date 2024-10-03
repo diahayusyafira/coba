@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Virtual Tour 360</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!-- Menambahkan gambar 360 derajat -->
+      <a-sky src="your-360-image.jpg"></a-sky>
+      
+      <!-- Membuat navigasi interaktif -->
+      <a-text value="Klik di sini untuk melanjutkan!" position="-2 1 -3"></a-text>
+      
+      <!-- Navigasi ke lokasi berikutnya (contoh sederhana) -->
+      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E" 
+                event-set__click="_event: click; material.color: #F0F;" 
+                animation="property: position; to: 0 2 -5; dur: 1000">
+      </a-sphere>
+    </a-scene>
+  </body>
+</html>
